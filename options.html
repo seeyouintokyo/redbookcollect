@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redbook Collect 配置</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    h1 {
+      color: #ff2442;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .help-text {
+      font-size: 0.8em;
+      color: #666;
+    }
+    button {
+      background-color: #ff2442;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 4px;
+      align-self: flex-start;
+    }
+    button:hover {
+      background-color: #e60023;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Redbook Collect 配置</h1>
+    <div class="form-group">
+      <label for="table-url">飞书多维表格 URL</label>
+      <input type="text" id="table-url" placeholder="直接粘贴表格 URL 即可">
+      <p class="help-text">例如: https://bytesmore.feishu.cn/base/UQxWbiiaSa7oqssbIxLclGeVnrV?table=tblQqWO7UfZ3JNTB&view=vewHNkTAcq</p>
+    </div>
+    <div class="form-group">
+      <label for="app-token">飞书应用 App Token</label>
+      <input type="text" id="app-token" placeholder="填写飞书应用的 app_token">
+    </div>
+    <div class="form-group">
+      <label for="app-secret">飞书应用 App Secret</label>
+      <input type="password" id="app-secret" placeholder="填写飞书应用的 app_secret">
+    </div>
+    <button id="save-btn">保存配置</button>
+    <div id="status-message"></div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html> 

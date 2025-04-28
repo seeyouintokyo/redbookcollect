@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Redbook Collect",
+  "version": "1.0",
+  "description": "从小红书笔记中提取信息并写入到飞书多维表格",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.xiaohongshu.com/*",
+    "https://open.feishu.cn/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.xiaohongshu.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_page": "options.html"
+} 
