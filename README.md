@@ -1,5 +1,7 @@
 # Redbook Collect 小红书采集器
 
+# 教程：https://mp.weixin.qq.com/s/gU3j0R9PJJdsNry6G4e-1g
+
 一个Chrome浏览器插件，用于从小红书笔记页面提取信息并写入到飞书多维表格。
 
 ## 功能特点
