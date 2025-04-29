@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Create Redbook Collect Icons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    canvas {
+      border: 1px solid #ddd;
+      margin-top: 10px;
+    }
+    .icon-section {
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #ff2442;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    h2 {
+      color: #ff2442;
+    }
+    #image-input {
+      margin-bottom: 20px;
+    }
+    .instructions {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Redbook Collect 图标生成器</h1>
+    
+    <div class="instructions">
+      <h3>使用说明：</h3>
+      <ol>
+        <li>选择您想用作图标的图片</li>
+        <li>图片会被裁剪为正方形并调整为所需的尺寸</li>
+        <li>点击"下载图标"按钮保存每个尺寸的图标</li>
+        <li>将保存的图标放入项目的 images 文件夹中</li>
+      </ol>
+    </div>
+    
+    <input type="file" id="image-input" accept="image/*">
+    
+    <div class="icon-section">
+      <h2>16x16 图标</h2>
+      <canvas id="canvas16" width="16" height="16"></canvas><br>
+      <button id="download16">下载图标 (16x16)</button>
+    </div>
+    
+    <div class="icon-section">
+      <h2>48x48 图标</h2>
+      <canvas id="canvas48" width="48" height="48"></canvas><br>
+      <button id="download48">下载图标 (48x48)</button>
+    </div>
+    
+    <div class="icon-section">
+      <h2>128x128 图标</h2>
+      <canvas id="canvas128" width="128" height="128"></canvas><br>
+      <button id="download128">下载图标 (128x128)</button>
+    </div>
+  </div>
+  
+  <script>
+    const imageInput = document.getElementById('image-input');
+    const canvas16 = document.getElementById('canvas16');
+    const canvas48 = document.getElementById('canvas48');
+    const canvas128 = document.getElementById('canvas128');
+    const download16 = document.getElementById('download16');
+    const download48 = document.getElementById('download48');
+    const download128 = document.getElementById('download128');
+    
+    // 当选择图片时
+    imageInput.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          // 处理所有canvas
+          processImage(img, canvas16, 16);
+          processImage(img, canvas48, 48);
+          processImage(img, canvas128, 128);
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+    
+    // 处理图片函数
+    function processImage(img, canvas, size) {
+      const ctx = canvas.getContext('2d');
+      
+      // 确定裁剪区域
+      const minDimension = Math.min(img.width, img.height);
+      const sx = (img.width - minDimension) / 2;
+      const sy = (img.height - minDimension) / 2;
+      
+      // 清除canvas
+      ctx.clearRect(0, 0, size, size);
+      
+      // 绘制图片，裁剪为正方形
+      ctx.drawImage(
+        img,
+        sx, sy, minDimension, minDimension, // 源矩形
+        0, 0, size, size // 目标矩形
+      );
+    }
+    
+    // 下载按钮事件
+    download16.addEventListener('click', function() {
+      downloadCanvas(canvas16, 'icon16.png');
+    });
+    
+    download48.addEventListener('click', function() {
+      downloadCanvas(canvas48, 'icon48.png');
+    });
+    
+    download128.addEventListener('click', function() {
+      downloadCanvas(canvas128, 'icon128.png');
+    });
+    
+    // 下载canvas为PNG图片
+    function downloadCanvas(canvas, filename) {
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+</body>
+</html> 

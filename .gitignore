@@ -1,0 +1,23 @@
+# macOS系统文件
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# 临时文件
+*.log
+*.tmp
+tmp/
+
+# 开发相关
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# 其他
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local 
