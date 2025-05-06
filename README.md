@@ -1,3 +1,9 @@
+# 📜 License  
+This project is licensed under the **No Commercial Use / No Redistribution** license.  
+- **You CANNOT** use this code commercially, modify it, or redistribute it.  
+- **You CAN** view and run the code for personal/non-commercial purposes.
+- 
+
 # Redbook Collect 小红书采集器
 
 # 教程：https://mp.weixin.qq.com/s/gU3j0R9PJJdsNry6G4e-1g
