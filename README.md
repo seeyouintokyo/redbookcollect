@@ -8,7 +8,8 @@
 
 ### 联系方式
 
-![正宗创建人多人活码_副本](https://github.com/user-attachments/assets/c28aeb43-b502-41f7-b542-d1f4c41adb03)
+<img width="166" alt="image" src="https://github.com/user-attachments/assets/1e360236-e684-4d63-b810-22dacefd6200" />
+
 
 
 ### 公众号
