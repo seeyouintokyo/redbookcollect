@@ -1,8 +1,21 @@
 # 📜 License  
-This project is licensed under the **No Commercial Use / No Redistribution** license.  
-- **You CANNOT** use this code commercially, modify it, or redistribute it.  
-- **You CAN** view and run the code for personal/non-commercial purposes.
-- 
+
+​​非商业用途许可证（Non-Commercial License）​​
+​​版权所有 (c) [年份] [你的名字或组织名]​​
+
+在此授予任何人免费获得本软件及相关文档文件（以下简称“软件”）的副本，但​​仅限于非商业用途​​。
+未经许可，不得将本软件用于任何商业目的（包括但不限于销售、租赁、广告、商业服务等）。
+
+​​许可条件​​：
+本软件不得用于任何商业用途。
+不得修改、删除或隐藏本许可证文件。
+不得对本软件作者或版权持有人提出索赔或法律追责。
+​​免责声明​​：
+本软件按“原样”提供，不提供任何明示或暗示的担保，包括但不限于适销性、特定用途适用性和不侵权。
+作者或版权持有人不对因使用本软件而产生的任何直接、间接、偶然、特殊或后果性损害负责。
+
+​
+
 
 # Redbook Collect 小红书采集器
 
