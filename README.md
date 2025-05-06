@@ -5,13 +5,15 @@
 一个Chrome浏览器插件，用于从小红书笔记页面提取信息并写入到飞书多维表格。
 
 ——————————————
-联系方式
+
+### 联系方式
 
 ![正宗创建人多人活码_副本](https://github.com/user-attachments/assets/c28aeb43-b502-41f7-b542-d1f4c41adb03)
 
 
-公众号
+### 公众号
 ![qrcode_for_gh_42337c489076_258 (1)](https://github.com/user-attachments/assets/1db604bd-85ff-499e-8f0f-a5d42d970fa3)
+
 
 ——————————————
 
